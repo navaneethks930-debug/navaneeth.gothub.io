@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            background-color: #020617;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #020617;
+            border: 1px solid #cb641a;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(198, 77, 77, 0.4);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5f5;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 30px;
+            background-color: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+
+        }
+
+        .btn:hover {
+            background-color: #0ea5e9;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>👋 Hi, I’m Navaneeth</h1>
+        <p class="subtitle">
+            Beginner Web Developer learning HTML, CSS, and JavaScript
+        </p>
+
+        <div class="card">
+            <h2>🎮 Speed Click Timer Game</h2>
+            <p>
+                A simple browser game built using HTML, CSS, and JavaScript.
+                The player clicks as fast as possible before time runs out.
+            </p>
+
+            <!-- For now this just opens the game file -->
+            <a class="btn" href="game.html">▶ Play Game</a>
+        </div>
+
+        <div class="card">
+            <h2>📘 Skills</h2>
+            <p>HTML • CSS • JavaScript</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

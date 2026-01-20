@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div class="card">
+        <h2>🧑‍💻 About Me</h2>
+        <p>
+            I am a beginner in web development, currently learning HTML, CSS, and JavaScript.
+            I enjoy building simple games and websites to improve my logical thinking
+            and programming skills.
+        </p>
+    </div>
+
+    <title>Code Quest - Timer Game</title>
+
+    <style>
+        body {
+            background-color: #020617;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        .info {
+            font-size: 22px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #38bdf8;
+            font-size: 22px;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fbbf24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>⏱ Speed Click Game</h1>
+
+    <div class="info">Time Left: <span id="time">10</span> seconds</div>
+    <div class="info">Score: <span id="score">0</span></div>
+
+    <button id="clickBtn" onclick="gainPoint()">CLICK FAST!</button>
+
+    <p id="message"></p>
+
+    <script>
+        let score = 0;
+        let timeLeft = 10;
+        let timer;
+
+        function gainPoint() {
+            score++;
+            document.getElementById("score").innerText = score;
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("time").innerText = timeLeft;
+
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function endGame() {
+            document.getElementById("clickBtn").disabled = true;
+            document.getElementById("message").innerText =
+                "⛔ Game Over! Final Score: " + score;
+        }
+
+        startTimer();
+    </script>
+
+</body>
+
+</html>
